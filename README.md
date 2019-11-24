@@ -1,5 +1,5 @@
-# Alee Production Website
-The official website for Alee Productions.
+# Project NewTube
+A YouTube alternative.
 
 Written in Express.JS, EJS and Material Design Bootstrap.
 

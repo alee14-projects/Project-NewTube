@@ -6,11 +6,10 @@
 </head>
 <body class="dark">
     <% include ./includes/navbar %>
-    <div class="animsition">
    <div class="text-center mt-3">
        <h1>404 - Not Found</h1>
        <h2 id="404message"></h2>
-       <h3>Return to <a href="/" class="green-text">homepage</a>?</h3>
+       <h3>Return to <a href="/" class="blue-text">homepage</a>?</h3>
     </div>
     <script>
         function randomtext() {
@@ -25,7 +24,6 @@
 
         document.getElementById("404message").innerHTML = randomtext();
     </script>
-    </div>
     <% include ./includes/scripts %>
 </body>
 </html>

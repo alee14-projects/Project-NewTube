@@ -22,13 +22,12 @@ const app = express();
 const moment = require('moment');
 const readline = require("readline");
 const path = require("path");
-const config = require("./config.json");
-const webhook = require("webhook-discord");
+//const config = require("./config.json");
 const mongoose = require('mongoose');
 const passport = require('passport');
 const flash = require('connect-flash');
 const session = require('express-session');
-const Hook = new webhook.Webhook(config.durl);
+//const Hook = new webhook.Webhook(config.durl);
 
 const port = 4000;
 
@@ -65,7 +64,7 @@ rl.on("line", (input) => {
     case "exit":
       async function exitWebsite() {
         console.log("[i] Closing website...");
-        await Hook.info("Alee Productions Website", "Website is shutting down...");
+        //await Hook.info("Alee Productions Website", "Website is shutting down...");
         process.exit(0);
       }
       exitWebsite();
@@ -90,10 +89,6 @@ app.use(logger);
 // Routes
 
 app.use("/", require("./routes/index"));
-app.use("/projects", require("./routes/projects"));
-app.use("/blog", require("./routes/blog"));
-app.use("/about", require("./routes/about"));
-app.use("/community/rules", require("./routes/community-rules"));
 
 app.use((req, res) => {
   res.status(404).render("404", {
@@ -102,6 +97,6 @@ app.use((req, res) => {
 });
 
 app.listen(port, () => {
-  Hook.success("Alee Productions Website","Website has been loaded!");
+  //Hook.success("Alee Productions Website","Website has been loaded!");
   console.log(`[>] Website listening on port ${port}!`);
 });
