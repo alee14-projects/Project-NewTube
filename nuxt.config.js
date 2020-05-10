@@ -42,7 +42,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/pwa'],
+  modules: ['@nuxtjs/pwa', '@nuxtjs/axios', '@nuxtjs/auth'],
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
